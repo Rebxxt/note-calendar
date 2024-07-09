@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package calendar.api.notes.v1;
+
+option go_package="calendar.notes.api.v1;notes";
+
+service Notes {
+  rpc Get(NoteGetRequest) returns (NoteGetResponse) {}
+  rpc List(NoteListRequest) returns (NoteListResponse) {}
+  rpc Create(NoteCreateRequest) returns (NoteCreateResponse) {}
+  rpc Delete(NoteDeleteRequest) returns (NoteDeleteResponse) {}
+  rpc Update(NoteUpdateRequest) returns (NoteUpdateResponse) {}
+}
+
+message NoteGetRequest {}
+message NoteGetResponse {}
+
+message NoteListRequest {}
+message NoteListResponse {}
+
+message NoteCreateRequest {}
+message NoteCreateResponse {}
+
+message NoteDeleteRequest {}
+message NoteDeleteResponse {}
+
+message NoteUpdateRequest {}
+message NoteUpdateResponse {}
